@@ -62,6 +62,26 @@ const fillForm = (work, destinatary=null, zone=null, commune=null) => {
   }
 };
 
+const createPreview = () => {
+  $('input[name=cmdAceptar]').click();
+};
+
+const confirm = () => {
+  $('input[name=cmdconfirmar]').click();
+};
+
+const sendEmail = () => {
+  $('#cmdenviar').click();
+};
+
+const confirmSendEmail = () => {
+  $('#cmdcontinuar').click();
+};
+
+const exit = () => {
+  $('#cmdsalir').click();
+};
+
 const byLastInvoice = (user, work) => {
   return new Promise((resolve, reject) => {
     new Nightmare()
@@ -75,6 +95,11 @@ const byLastInvoice = (user, work) => {
       .evaluate(gotToLast)
       .evaluate(selectLast)
       .evaluate(fillForm, work)
+      .evaluate(createPreview)
+      .evaluate(confirm)
+      .evaluate(sendEmail)
+      .evaluate(confirmSendEmail)
+      .evaluate(exit)
       .run(err => {
         if (err) return reject(err);
         resolve();
@@ -95,6 +120,11 @@ const byDestinatary = (user, work, destinatary, zone, commune) => {
       .evaluate(gotToDestinatary)
       .evaluate(selectRetention)
       .evaluate(fillForm, work, destinatary, zone, commune)
+      .evaluate(createPreview)
+      .evaluate(confirm)
+      .evaluate(sendEmail)
+      .evaluate(confirmSendEmail)
+      .evaluate(exit)
       .run(err => {
         if (err) return reject(err);
         resolve();
