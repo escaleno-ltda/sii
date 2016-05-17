@@ -1,14 +1,14 @@
 /* global $ */
 
-import Nightmare from 'nightmare';
-import rp from 'request-promise';
-import zones from '../zones.json';
+const Nightmare = require('nightmare');
+const rp = require('request-promise');
+const zones = require('../zones.json');
 
 const userAgent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36';
 const loginUri = 'https://zeus.sii.cl/AUT2000/InicioAutenticacion/IngresoRutClave.html?https://misii.sii.cl/cgi_misii/siihome.cgi';
 const boletasUri = 'http://www.sii.cl/boleta_honorarios/';
 
-const getDestinataryName = (rut) => {
+const getDestinataryName = rut => {
   const options = {
     uri: 'https://siichile.herokuapp.com/consulta',
     qs: {rut: rut},
@@ -17,7 +17,7 @@ const getDestinataryName = (rut) => {
   return rp(options).then(data => data.razon_social);
 };
 
-const sendCredentials = (user) => {
+const sendCredentials = user => {
   $('#rutcntr').val(user.rut);
   $('#rutcntr').blur();
   $('#clave').val(user.password);
@@ -43,7 +43,10 @@ const selectRetention = () => {
   $('#cmdContinuar').click();
 };
 
-const fillForm = (work, destinatary=null, zone=null, commune=null) => {
+const fillForm = (work, destinatary, zone, commune) => {
+  destinatary = destinatary || null;
+  zone = zone || null;
+  commune = commune || null;
   $('#desc_prestacion_1').val(work.description);
   $('#valor_prestacion_1').val(work.value);
   if (destinatary !== null) {

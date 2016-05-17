@@ -4,14 +4,10 @@
   "description": "Crea facilmente boleta de honorarios",
   "main": "lib",
   "scripts": {
-    "prepublish": "npm run build -s",
-    "prebuild": "npm run lint -s && npm run clean -s",
-    "build": "babel src --out-dir lib --source-maps",
-    "lint": "eslint src",
-    "clean": "rimraf lib"
+    "prepublish": "eslint ."
   },
   "engines": {
-    "node": ">=0.12"
+    "node": ">=4"
   },
   "repository": {
     "type": "git",
@@ -27,28 +23,19 @@
   },
   "homepage": "https://github.com/lgaticaq/sii#readme",
   "dependencies": {
-    "nightmare": "^2.3.4",
+    "nightmare": "^2.4.0",
     "phantom": "^2.1.2",
     "request-promise": "^3.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.9.0",
-    "babel-core": "^6.8.0",
-    "babel-preset-es2015": "^6.6.0",
-    "chai": "^3.5.0",
-    "eslint": "2.10.2",
-    "rimraf": "^2.5.2"
+    "eslint": "2.10.2"
   },
   "eslintConfig": {
     "env": {
       "es6": true,
-      "node": true,
-      "mocha": true
+      "node": true
     },
     "extends": "eslint:recommended",
-    "parserOptions": {
-      "sourceType": "module"
-    },
     "rules": {
       "indent": [
         2,
@@ -67,11 +54,6 @@
         "always"
       ]
     }
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
   },
   "tonicExampleFilename": "example.js"
 }
