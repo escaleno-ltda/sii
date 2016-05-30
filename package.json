@@ -2,7 +2,7 @@
   "name": "sii",
   "version": "0.0.1",
   "description": "Crea facilmente boleta de honorarios",
-  "main": "lib",
+  "main": "src",
   "scripts": {
     "prepublish": "eslint ."
   },
