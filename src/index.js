@@ -47,8 +47,8 @@ const fillForm = (work, destinatary, zone, commune) => {
   destinatary = destinatary || null;
   zone = zone || null;
   commune = commune || null;
-  $('#desc_prestacion_1').val(work.description);
   $('#valor_prestacion_1').val(work.value);
+  if (work.description) $('#desc_prestacion_1').val(work.description);
   if (destinatary !== null) {
     $('input[name=txt_rut_destinatario]').val(destinatary.rut);
     $('input[name=txt_dv_destinatario]').val(destinatary.dv);
