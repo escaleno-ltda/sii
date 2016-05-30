@@ -4,7 +4,10 @@
   "description": "Crea facilmente boleta de honorarios",
   "main": "src",
   "scripts": {
-    "prepublish": "eslint ."
+    "prepublish": "eslint .",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
   },
   "engines": {
     "node": ">=4"
@@ -28,7 +31,8 @@
     "request-promise": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "2.11.0"
+    "eslint": "2.11.0",
+    "generate-changelog": "^1.0.1"
   },
   "eslintConfig": {
     "env": {
