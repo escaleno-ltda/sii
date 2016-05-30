@@ -1,3 +1,9 @@
+#### 0.0.3 (2016-5-29)
+
+##### Bug Fixes
+
+* **src:** Only set description if entered ([43b86196](https://github.com/lgaticaq/sii/commit/43b86196e9082f8279ebeeca0223c95c3bd4f108))
+
 #### 0.0.2 (2016-5-29)
 
 ##### Chores
