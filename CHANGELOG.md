@@ -1,3 +1,9 @@
+#### 0.0.4 (2016-5-30)
+
+##### Bug Fixes
+
+* **src:** Add delay in scrapping ([b0dea621](https://github.com/lgaticaq/sii/commit/b0dea621de60a83028cb8d9d2ad57b9e8f7cf909))
+
 #### 0.0.3 (2016-5-29)
 
 ##### Bug Fixes
