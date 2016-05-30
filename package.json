@@ -1,6 +1,6 @@
 {
   "name": "sii",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Crea facilmente boleta de honorarios",
   "main": "src",
   "scripts": {
