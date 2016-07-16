@@ -28,7 +28,7 @@
   "dependencies": {
     "nightmare": "^2.5.3",
     "phantom": "^2.1.12",
-    "request-promise": "^3.0.0"
+    "request-promise": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "3.0.1",
