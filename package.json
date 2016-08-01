@@ -31,7 +31,7 @@
     "request-promise": "^4.1.0"
   },
   "devDependencies": {
-    "eslint": "3.2.0",
+    "eslint": "3.2.2",
     "generate-changelog": "^1.0.2"
   },
   "eslintConfig": {
