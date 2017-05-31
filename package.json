@@ -4,10 +4,11 @@
   "description": "Crea facilmente boleta de honorarios",
   "main": "src",
   "scripts": {
-    "prepublish": "eslint .",
+    "prepublish": "npm run snyk-protect && eslint .",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=4"
@@ -28,7 +29,8 @@
   "dependencies": {
     "nightmare": "^2.8.1",
     "phantom": "^4.0.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "snyk": "^1.32.0"
   },
   "devDependencies": {
     "eslint": "3.19.0",
@@ -59,5 +61,6 @@
       ]
     }
   },
-  "tonicExampleFilename": "example.js"
+  "tonicExampleFilename": "example.js",
+  "snyk": true
 }
