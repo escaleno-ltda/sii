@@ -33,7 +33,7 @@
     "snyk": "^1.38.2"
   },
   "devDependencies": {
-    "eslint": "4.6.0",
+    "eslint": "4.6.1",
     "generate-changelog": "1.4.0"
   },
   "eslintConfig": {
