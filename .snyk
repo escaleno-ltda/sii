@@ -8,3 +8,8 @@ patch:
         patched: '2017-05-31T08:02:04.011Z'
     - phantom > phantomjs-prebuilt > extract-zip > debug > ms:
         patched: '2017-08-16T08:02:06.523Z'
+  'npm:debug:20170905':
+    - nightmare > electron > extract-zip > debug:
+        patched: '2017-09-27T08:02:07.420Z'
+    - phantom > phantomjs-prebuilt > extract-zip > debug:
+        patched: '2017-09-27T08:02:07.420Z'
