@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "eslint": "4.13.1",
-    "generate-changelog": "1.6.0"
+    "generate-changelog": "1.7.0"
   },
   "eslintConfig": {
     "env": {
