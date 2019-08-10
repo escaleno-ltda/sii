@@ -28,7 +28,7 @@
   "homepage": "https://github.com/lgaticaq/sii#readme",
   "dependencies": {
     "nightmare": "^2.8.1",
-    "phantom": "^4.0.0",
+    "phantom": "^6.0.0",
     "request-promise": "^4.1.1",
     "snyk": "^1.41.1"
   },
