@@ -30,7 +30,7 @@
     "nightmare": "^2.8.1",
     "phantom": "^4.0.0",
     "request-promise": "^4.1.1",
-    "snyk": "^1.41.1"
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "eslint": "4.19.1",
